@@ -1,4 +1,4 @@
-"""Module 1 — Voice of Customer AI"""
+"""Module 1 - Voice of Customer AI"""
 
 import os, sys
 import pandas as pd
@@ -39,7 +39,7 @@ def detect_anomalies(df):
 
 def show():
     st.markdown("## 🗣️ Voice of Customer AI")
-    st.markdown(f"AI-powered analysis of real **{APP_NAME}** App Store reviews — themes, anomalies, and executive summaries.")
+    st.markdown(f"AI-powered analysis of real **{APP_NAME}** App Store reviews - themes, anomalies, and executive summaries.")
 
     df = load_data()
     if df is None:
@@ -75,7 +75,7 @@ def show():
     c2.metric("Avg Rating", f"{filtered['stars'].mean():.2f} ⭐")
     c3.metric("1-2 Star",   f"{(filtered['stars']<=2).mean()*100:.1f}%")
     c4.metric("4-5 Star",   f"{(filtered['stars']>=4).mean()*100:.1f}%")
-    c5.metric("Versions",   filtered["version"].nunique() if "version" in filtered.columns else "—")
+    c5.metric("Versions",   filtered["version"].nunique() if "version" in filtered.columns else "-")
 
     # ── Charts ────────────────────────────────────────────────────────────────
     st.markdown("---")
